@@ -18,7 +18,7 @@
             <?php endif;?>
             <?php if($this->session->userdata('id')):?>
                 <div class="alert alert-success">
-                     Your ID is:<?php echo ($this->session->userdata('id'));?> keep it safe!
+                     Your ID is:<?php echo ($this->session->userdata('reg_id'));?> keep it safe!
                 </div>     
             <?php endif;?>	
 			<div class="d-flex justify-content-center form_container">

@@ -14,6 +14,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1 class="text-center">Results</h1>
     <div class="row">
         <div id="body" class="col-md-10 offset-2">
+
+
             <ol type="1">
                     <?php foreach ($questions as $question):?>
 
@@ -22,8 +24,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <ol type="a">
                             <?php foreach ($this->Question_model->getAnswerByQuestion($question->id) as $answer):?>
                                 <li>
+                                    <?php if($answer->body == $this->session->userdata('correct')):?>
+                                        <p><span style="background-color: #FF9C9E"><?=$answer->body;?></span></p>
+                                    <?php endif;?>
+                                    <?php if($answer->body == $this->session->userdata('selected')):?>
+                                        <p><span style="background-color: #ADFFB4"><?=$answer->body;?></span></p>
+                                    <?php endif;?>
                                     <?php echo $answer->body;?>
-
                                 </li>
                             <?php endforeach;?>
                             </ol>
