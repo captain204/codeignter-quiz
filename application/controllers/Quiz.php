@@ -15,9 +15,9 @@ class Quiz extends CI_Controller{
             {
                 $result +=10;
             }
-            $this->session->set_userdata('correct',$this->Question_model->getAnswerIdCorrect($question_id));
-            $this->session->set_userdata('selected',$_POST['question_'.$question_id]);
         }
+        $this->session->set_userdata('correct',$this->Question_model->getAnswerIdCorrect($question_id));
+        $this->session->set_userdata('selected',$_POST['question_'.$question_id]);
         // Submission check
         $submission = $this->Submission_model->get_by_id($this->session->userdata('id'));
         if(!$submission)

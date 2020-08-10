@@ -35,12 +35,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <?php endforeach;?>
                             </ol>
                     </li>
-
                     <?php endforeach;?>
                 </ol>
                 <h3><?php echo ($this->session->userdata('name'));?></h3>
                 <h3>Date:<?= date('Y-m-d H:i:s') ?><h3>
-                <h3> Your Score is:<?php echo $result;?>/20</h3>
+                <h3> Your Score is:<?php echo $result;?>/50</h3>
                 <a href="<?php echo site_url('quiz');?>" class="btn btn-primary">Try again</a>
                 <a href="<?php echo site_url('user/logout');?>" class="btn btn-danger">Logout</a>
             

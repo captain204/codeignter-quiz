@@ -16,13 +16,13 @@
                         <?php echo ($this->session->flashdata('created'));?>
                 </div>
             <?php endif;?>
-            <?php if($this->session->userdata('id')):?>
+            <?php if($this->session->userdata('reg_id')):?>
                 <div class="alert alert-success">
                      Your ID is:<?php echo ($this->session->userdata('reg_id'));?> keep it safe!
                 </div>     
-            <?php endif;?>	
+            <?php endif;?>
+            <?php echo validation_errors('<div class ="alert alert-danger">','</div>');?>	
 			<div class="d-flex justify-content-center form_container">
-            <?php echo validation_errors('<div class ="alert alert-danger">','</div>');?>
 				<form action="<?php echo site_url('user');?>" method="post">
 					<div class="input-group mb-3">
 						<div class="input-group-append">

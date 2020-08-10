@@ -44,15 +44,15 @@ class User extends CI_Controller{
         } else{
             //Generate 6 digit random number
             $random_number = mt_rand(100000,999999);
-            $id = 'ID'.$random_number;
+            $reg_id = 'ID'.$random_number;
             $data = array(
                 'name'=>$this->input->post('name'),
-                'reg_id'=>$id,
+                'reg_id'=>$reg_id,
             );
 
             $this->User_model->insert($data);
-            $this->session->set_userdata('id',$id); 
-            $this->session->set_flashdata('created','Your registeration Id has been genrated');
+            $this->session->set_userdata('reg_id',$reg_id); 
+            $this->session->set_flashdata('created','Your registeration Id has been generated');
             redirect('user/index');
             
         }

@@ -14,6 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="row">
         <div id="body" class="col-md-10 offset-2">
             <h2>Start Quiz</h2>
+            <h2>Identify the noun in the following sentences</h2>
             <form  method="post" action="<?php echo site_url('quiz/submit');?>">
                 <ol type="1">
                     <?php foreach ($questions as $question):?>
